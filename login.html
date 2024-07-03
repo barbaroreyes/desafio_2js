@@ -10,17 +10,18 @@
       crossorigin="anonymous"
     />
 
-    <title>Document</title>
+    <title>Login_Page</title>
   </head>
   <body>
-    <div class="container ">
-      <div class="row d-flex  justify-content-center  ">
-        <div class="col d-flex  justify-content-center ">
-          <div class="registration js-registration">
-            <div class="registration__content">
+    <div class="container">
+      <div class="row ">
+        <div class="col ">
+          <div class="">
+            <div class=" d-flex  flex-column  justify-content-center align-items-center  p-4">
               <a href="/">
                 <img
-                  class="registration__logo w-20"
+                  width="60"
+                  class="registration__logo "
                   src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/original_logo_0DliJcfsTcciZen38gX9.png"
                   alt="DEV Community"
                 />
@@ -54,7 +55,7 @@
                   <button
                     name="button"
                     type="submit"
-                    class="flex w-100 p-3 radius-default  items-center bg-base-inverted registration__button-container brand-apple"
+                    class="flex w-100 p-2 border  rounded-1  d-flex  mb-2 items-center bg-transparent registration__button-container brand-apple"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +99,7 @@
                   <button
                     name="button"
                     type="submit"
-                    class="flex w-100 p-3 radius-default items-center bg-base-inverted registration__button-container brand-facebook"
+                    class="flex w-100 p-2 border  rounded-1  mb-2  d-flex items-center bg-transparent registration__button-container brand-facebook"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +148,7 @@
                   <button
                     name="button"
                     type="submit"
-                    class="flex w-100 p-3 radius-default items-center bg-base-inverted registration__button-container brand-forem"
+                    class="flex w-100 p-2 border  rounded-1 mb-2 d-flex items-center bg-transparent registration__button-container brand-forem"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -208,7 +209,7 @@
                   <button
                     name="button"
                     type="submit"
-                    class="flex w-100 p-3 radius-default items-center bg-base-inverted registration__button-container brand-github"
+                    class="flex w-100 p-2 border  rounded-1 mb-2 d-flex items-center bg-transparent registration__button-container brand-github"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -235,9 +236,9 @@
                 </form>
                 <form
                   class="flex w-100"
-                  action="/users/auth/google_oauth2?callback_url=https%3A%2F%2Fdev.to%2Fusers%2Fauth%2Fgoogle_oauth2%2Fcallback&amp;state=navbar_basic"
+                  
                   accept-charset="UTF-8"
-                  method="post"
+                 
                 >
                   <input
                     name="utf8"
@@ -253,7 +254,7 @@
                   <button
                     name="button"
                     type="submit"
-                    class="flex w-100 p-3 radius-default items-center bg-base-inverted registration__button-container brand-google_oauth2"
+                    class="flex w-100 p-2 border  rounded-1 mb-2 d-flex items-center bg-transparent registration__button-container brand-google_oauth2"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -310,7 +311,7 @@
                   <button
                     name="button"
                     type="submit"
-                    class="flex w-100 p-3 radius-default items-center bg-base-inverted registration__button-container brand-twitter"
+                    class="flex w-100 p-2 border rounded-1 mb-4 d-flex items-center bg-transparent registration__button-container brand-twitter"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -356,9 +357,9 @@
                   data-testid="login-form"
                   class="new_user"
                   id="new_user"
-                  action="/users/sign_in"
+                  action="/index.html"
                   accept-charset="UTF-8"
-                  method="post"
+                
                 >
                   <input
                     name="utf8"
@@ -377,20 +378,20 @@
                     >
                     <input
                       autocomplete="email"
-                      class="crayons-textfield"
+                      class="user_email_input w-100 p-1 rounded-1 border"
                       type="email"
                       name="user[email]"
                       id="user_email"
                     />
                   </div>
 
-                  <div class="crayons-field mb-3">
+                  <div class="user_password_input mb-3">
                     <label class="crayons-field__label" for="user_password"
                       >Password</label
                     >
                     <input
                       autocomplete="current-password"
-                      class="crayons-textfield"
+                      class="crayons-textfield w-100 p-1 rounded-1 border"
                       type="password"
                       name="user[password]"
                       id="user_password"
@@ -398,7 +399,7 @@
                   </div>
 
                   <div
-                    class="crayons-field flex flex-row items-center justify-between mb-3"
+                    class="crayons-field d-flex  justify-content-between "
                   >
                     <div>
                       <input
@@ -425,13 +426,14 @@
                     </a>
                   </div>
 
-                  <div class="actions pt-3">
+                  <div class="actions pt-3 ">
                     <input
                       type="submit"
                       name="commit"
                       value="Log in"
-                      class="crayons-btn crayons-btn--l w-100"
+                      class="crayons-btn crayons-btn--l w-100 btn btn-primary  "
                       data-disable-with="Log in"
+                      id="submitButton"
                     />
                   </div>
                 </form>
