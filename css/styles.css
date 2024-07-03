@@ -1,12 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: rgb(242, 242, 242);
   font-family: "Noto Sans", sans-serif;
   margin-top: 70px;
 }
 
+/* .container {
+  padding-top: 5px;
+  padding-bottom: 5px;
+} */
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.form-control {
+  width: 500px;
+}
+
+.form-control:focus {
+  border-color: rgb(44, 45, 215);
+  box-shadow: none;
+  border-width: 2px;
+}
+
+.imgProfile {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.imgLogo {
+  width: 60px;
+  height: 40px;
+}
+
+.imgNotifications {
+  width: 35px;
+  height: 35px;
+}
+
+.btn-outline-primary {
+  border-color: rgb(44, 44, 215);
+  color: rgb(44, 45, 215);
+}
+
+.btn-underline:hover {
+  text-decoration: underline;
+  background-color: rgb(44, 46, 214);
+}
+
+.btn-search {
+  border-style: none;
+}
+
+.btn-notifications {
+  border-style: none;
+}
+
+.btn-profile {
+  border-style: none;
+  background: none;
+}
+
+.btn-logo {
+  border-style: none;
+}
+
+.hashtagList {
+  margin-top: 5rem;
+}
+
+.container {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.form-control {
+  width: 500px;
+}
+
+.form-control:focus {
+  border-color: rgb(44, 45, 215);
+  box-shadow: none;
+  border-width: 2px;
+}
+
+.imgProfile {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.imgLogo {
+  width: 60px;
+  height: 40px;
+}
+
+.imgNotifications {
+  width: 35px;
+  height: 35px;
+}
+
+.btn-outline-primary {
+  border-color: rgb(44, 44, 215);
+  color: rgb(44, 45, 215);
+}
+
+.btn-underline:hover {
+  text-decoration: underline;
+  background-color: rgb(44, 46, 214);
+}
+
+.btn-search {
+  border-style: none;
+}
+
+.btn-notifications {
+  border-style: none;
+}
+
+.btn-profile {
+  border-style: none;
+  background: none;
+}
+
+.btn-logo {
+  border-style: none;
+}
+
+.hashtagList {
+  margin-top: 5rem;
+}
+
 .cardList {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .cardList .list-group .list-group-item a {
   text-decoration: none;
@@ -17,6 +154,9 @@ body {
   color: rgb(0, 0, 157);
 }
 .cardList .list-group .list-group-item a:hover #commentsList {
+  color: rgb(68, 68, 68);
+}
+.cardList .list-group .list-group-item a a:hover #commentsList {
   color: rgb(68, 68, 68);
 }
 .cardList .list-group .list-group-item a #commentsList {
@@ -88,4 +228,4 @@ body {
 
 #color-parrafo {
   color: rgb(113, 113, 113);
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */
