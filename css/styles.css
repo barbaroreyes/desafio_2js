@@ -12,3 +12,13 @@ header {
 .box1 {
   margin-left: 10px;
 }
+.image-container{
+ width:  15%;
+}
+.button_sign{
+  border: 1px solid black;
+  display:flex;
+  justify-content: flex-start;
+
+  background-color: red
+}
