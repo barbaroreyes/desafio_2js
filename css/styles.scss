@@ -1,19 +1,19 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+$color-button: rgb(47, 58, 178);
+$color-button-transparente: rgb(47, 58, 178, 0.2);
+$color-navbar: rgb(113, 113, 113);
+$font-noto-sans: "Noto Sans", sans-serif;
 
 body {
   background-color: rgb(242, 242, 242);
+  font-family: $font-noto-sans;
+  margin-top: 70px;
 }
-
+//estilos de lau
 .cardList {
   margin-top: 1rem;
   margin-bottom: 1rem;
   .list-group {
     .list-group-item {
-   
       a {
         text-decoration: none;
         color: rgb(60, 60, 60);
@@ -22,14 +22,92 @@ body {
           color: rgb(0, 0, 157);
           #commentsList {
             color: rgb(68, 68, 68);
+          }
         }
-      }
-      #commentsList {
-        font-size: 0.7rem;
-        color: rgb(136, 136, 136);
-       
+        #commentsList {
+          font-size: 0.7rem;
+          color: rgb(136, 136, 136);
+        }
       }
     }
   }
 }
+
+// texto parrafo de la card
+
+#texto-parrafo-hove:hover {
+  color: $color-button;
+}
+
+// estilos de jarol
+
+@mixin btn-style-blue {
+  background-color: white;
+  color: $color-button;
+  border: 1px solid rgb(0, 0, 157);
+  transition: all 0.3s ease;
+}
+
+#boton-card-1 {
+  @include btn-style-blue();
+}
+
+#boton-card-1:hover {
+  background-color: $color-button;
+  color: white;
+  text-decoration: underline;
+}
+#boton-card-1:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#boton-card-1:hover {
+  background-color: $color-button;
+  cursor: pointer;
+}
+
+#card-aside-left {
+  background-color: rgb(242, 242, 242);
+}
+
+//segundo boton login
+
+@mixin style-botones {
+  margin-top: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+  padding: 5px;
+  color: gray;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#boton-card-2 {
+  @include style-botones();
+}
+
+#boton-card-2:hover {
+  background-color: $color-button-transparente;
+  color: $color-button;
+}
+#boton-card-2:hover {
+  text-decoration: underline;
+  color: rgb(47, 58, 178);
+}
+
+//icom
+
+.bi-social-media:hover {
+  background-color: rgb(47, 58, 178, 0.2);
+  color: $color-button !important;
+}
+
+// letras del final de paginas
+#fw-color-fuerte {
+  color: $color-button;
+  cursor: pointer;
+}
+//colo parrafo
+#color-parrafo {
+  color: $color-navbar;
 }

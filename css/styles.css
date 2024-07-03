@@ -1,11 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   background-color: rgb(242, 242, 242);
+  font-family: "Noto Sans", sans-serif;
+  margin-top: 70px;
 }
 
 .cardList {
@@ -20,18 +16,76 @@ body {
 .cardList .list-group .list-group-item a:hover {
   color: rgb(0, 0, 157);
 }
-.cardList .list-group .list-group-item #commentsList {
+.cardList .list-group .list-group-item a:hover #commentsList {
+  color: rgb(68, 68, 68);
+}
+.cardList .list-group .list-group-item a #commentsList {
   font-size: 0.7rem;
   color: rgb(136, 136, 136);
 }
-.cardList .list-group .list-group-item #commentsList:hover {
-  color: rgb(68, 68, 68);
+
+#texto-parrafo-hove:hover {
+  color: rgb(47, 58, 178);
+}
+
+#boton-card-1 {
+  background-color: white;
+  color: rgb(47, 58, 178);
+  border: 1px solid rgb(0, 0, 157);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#boton-card-1:hover {
+  background-color: rgb(47, 58, 178);
+  color: white;
+  text-decoration: underline;
+}
+
+#boton-card-1:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#boton-card-1:hover {
+  background-color: rgb(47, 58, 178);
+  cursor: pointer;
+}
+
+#card-aside-left {
+  background-color: rgb(242, 242, 242);
+}
+
+#boton-card-2 {
+  margin-top: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+  padding: 5px;
+  color: gray;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#boton-card-2:hover {
+  background-color: rgba(47, 58, 178, 0.2);
+  color: rgb(47, 58, 178);
+}
+
+#boton-card-2:hover {
+  text-decoration: underline;
+  color: rgb(47, 58, 178);
+}
+
+.bi-social-media:hover {
+  background-color: rgba(47, 58, 178, 0.2);
+  color: rgb(47, 58, 178) !important;
+}
+
+#fw-color-fuerte {
+  color: rgb(47, 58, 178);
+  cursor: pointer;
+}
+
+#color-parrafo {
+  color: rgb(113, 113, 113);
 }/*# sourceMappingURL=styles.css.map */
-header {
-  display: flex;
-  justify-content: space-evenly;
-  border: 1px solid black;
-}
-.box1 {
-  margin-left: 10px;
-}
