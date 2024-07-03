@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 body {
   background-color: rgb(242, 242, 242);
 }
@@ -28,7 +27,6 @@ body {
 .cardList .list-group .list-group-item #commentsList:hover {
   color: rgb(68, 68, 68);
 }/*# sourceMappingURL=styles.css.map */
-=======
 header {
   display: flex;
   justify-content: space-evenly;
@@ -37,4 +35,3 @@ header {
 .box1 {
   margin-left: 10px;
 }
->>>>>>> dev
