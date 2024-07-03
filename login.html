@@ -236,9 +236,9 @@
                 </form>
                 <form
                   class="flex w-100"
-                  action="/users/auth/google_oauth2?callback_url=https%3A%2F%2Fdev.to%2Fusers%2Fauth%2Fgoogle_oauth2%2Fcallback&amp;state=navbar_basic"
+                  
                   accept-charset="UTF-8"
-                  method="post"
+                 
                 >
                   <input
                     name="utf8"
@@ -357,9 +357,9 @@
                   data-testid="login-form"
                   class="new_user"
                   id="new_user"
-                  action="/users/sign_in"
+                  action="/index.html"
                   accept-charset="UTF-8"
-                  method="post"
+                
                 >
                   <input
                     name="utf8"
@@ -378,14 +378,14 @@
                     >
                     <input
                       autocomplete="email"
-                      class="crayons-textfield w-100 p-1 rounded-1 border"
+                      class="user_email_input w-100 p-1 rounded-1 border"
                       type="email"
                       name="user[email]"
                       id="user_email"
                     />
                   </div>
 
-                  <div class="crayons-field mb-3">
+                  <div class="user_password_input mb-3">
                     <label class="crayons-field__label" for="user_password"
                       >Password</label
                     >
@@ -433,6 +433,7 @@
                       value="Log in"
                       class="crayons-btn crayons-btn--l w-100 btn btn-primary  "
                       data-disable-with="Log in"
+                      id="submitButton"
                     />
                   </div>
                 </form>
