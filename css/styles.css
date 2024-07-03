@@ -4,6 +4,29 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(242, 242, 242);
+}
+
+.cardList {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.cardList .list-group .list-group-item a {
+  text-decoration: none;
+  color: rgb(60, 60, 60);
+  font-size: 0.85rem;
+}
+.cardList .list-group .list-group-item a:hover {
+  color: rgb(0, 0, 157);
+}
+.cardList .list-group .list-group-item #commentsList {
+  font-size: 0.7rem;
+  color: rgb(136, 136, 136);
+}
+.cardList .list-group .list-group-item #commentsList:hover {
+  color: rgb(68, 68, 68);
+}/*# sourceMappingURL=styles.css.map */
 header {
   display: flex;
   justify-content: space-evenly;
