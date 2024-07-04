@@ -1,4 +1,6 @@
 // JavaScript para manejo de etiquetas
+import{createPost} from "../js/module.js";
+
 const tagInput = document.getElementById('tagInput');
 const tagContainer = document.querySelector('.tag-input');
 let tags = [];

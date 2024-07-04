@@ -1,4 +1,23 @@
-<<<<<<< HEAD
+import { getAllPosts , createPost } from "./module.js"
+
+
+const printAllPosts = async ()=>{
+  let posts = await getAllPosts();
+
+  posts.forEach((post) => {
+    const postElement = document.createElement("div");
+    postElement.className = "post";
+    postElement.innerHTML = `
+      <h2>${post.title}</h2>
+      
+    `;
+    document.body.appendChild(postElement);
+  });
+};
+
+printAllPosts();
+
+
 const posts = [
   { id: 1, text: "Post CCS 1", hashtags: ["#css"] },
   { id: 2, text: "Post CCS 2", hashtags: ["#css"] },
@@ -102,5 +121,5 @@ renderPosts();
 
 
 
-=======
->>>>>>> jarolGabriel/aside-left
+
+
