@@ -1,4 +1,8 @@
-<<<<<<< HEAD
+
+
+
+
+
 const posts = [
   { id: 1, text: "Post CCS 1", hashtags: ["#css"] },
   { id: 2, text: "Post CCS 2", hashtags: ["#css"] },
@@ -97,6 +101,8 @@ let renderPosts = () => {
 
 // Llamar a la función para renderizar los posts
 renderPosts();
+
+
 
 
 
