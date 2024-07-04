@@ -96,3 +96,8 @@ let renderPosts = () => {
 
 // Llamar a la función para renderizar los posts
 renderPosts();
+
+
+
+
+

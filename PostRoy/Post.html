@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Publicación</title>
+    <link rel="stylesheet" href="/PostRoy/Post.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <img
+          src="https://media.dev.to/cdn-cgi/image/quality=100/https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+          alt="Logo"
+          class="header-logo"
+        />
+        <h1 class="header-title">Crear publicación</h1>
+        <button class="header-edit-btn">Editar</button>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <section class="post-creation">
+        <label class="cover-image-btn" for="cover-image-input"
+          >Añadir una imagen de portada</label
+        >
+        <input type="file" id="cover-image-input" style="display: none" />
+        <input
+          class="post-title"
+          type="text"
+          placeholder="Nuevo título de publicación aquí..."
+          style="font-weight: bold"
+        />
+        <input
+          class="post-tags"
+          type="text"
+          placeholder="Añade hasta 4 etiquetas..."
+        />
+
+        <div class="editor-toolbar">
+          <button class="toolbar-btn bold-btn">B</button>
+          <button class="toolbar-btn italic-btn">I</button>
+          <button class="toolbar-btn link-btn">🔗</button>
+          <button class="toolbar-btn list-btn">🔢</button>
+          <button class="toolbar-btn quote-btn">“”</button>
+          <button class="toolbar-btn code-btn">❲❳</button>
+          <button class="toolbar-btn lightning-btn">⚡</button>
+          <button class="toolbar-btn image-btn">🖼️</button>
+          <button class="toolbar-btn more-btn">⋮</button>
+        </div>
+
+        <textarea
+          class="post-content"
+          placeholder="Escribe el contenido de tu publicación aquí..."
+        ></textarea>
+      </section>
+
+      <aside class="tips">
+        <h2>Cómo escribir un buen título para una publicación</h2>
+        <ul>
+          <li>
+            Piensa en el título de tu publicación como una descripción súper
+            breve (¡pero convincente!), como una descripción general de la
+            publicación real en una oración corta.
+          </li>
+          <li>
+            Utilice palabras clave cuando sea apropiado para garantizar que las
+            personas puedan encontrar su publicación mediante la búsqueda.
+          </li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <button class="publish-btn">Publicar</button>
+      <button class="save-draft-btn">Guardar borrador</button>
+      <button class="revert-btn">Revertir nuevos cambios</button>
+    </footer>
+
+    <script src="/PostRoy/Post.js"></script>
+  </body>
+</html>
