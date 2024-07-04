@@ -88,12 +88,12 @@ body {
           color: rgb(0, 0, 157);
           #commentsList {
             color: rgb(68, 68, 68);
-            }
           }
-          #commentsList {
-            font-size: 0.7rem;
-            color: rgb(136, 136, 136);
-        } }
+        }
+        #commentsList {
+          font-size: 0.7rem;
+          color: rgb(136, 136, 136);
+        }
       }
     }
   }
@@ -106,6 +106,11 @@ body {
 }
 
 // estilos de jarol
+
+//parrafo de la primera card
+.texto-bold {
+  font-weight: normal !important;
+}
 
 @mixin btn-style-blue {
   background-color: white;
@@ -178,3 +183,220 @@ body {
   color: $color-navbar;
 }
 
+// parte de la columna del medio las tres palabras
+.hero-hover-palabras {
+  padding: 5px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hover-palabra-active {
+  font-weight: bold;
+}
+.hero-hover-palabras:hover {
+  background-color: white;
+  color: $color-button;
+  border-radius: 10px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+
+.btn-extra-sm {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.list-gruop-hover {
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.list-gruop-hover:hover {
+  color: rgb(47, 58, 178);
+}
+
+// parte de card del medio
+
+.hero-imagen-perfil {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.car-body-perfil {
+  margin-top: -45px;
+  margin-left: 15px;
+  position: absolute;
+}
+
+.hero-image-badge {
+  height: 30px;
+  width: 30px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.card-title {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.card-text {
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px 10px 10px 20px;
+  margin: 0;
+}
+
+.card-text {
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.card-text:hover {
+  color: rgb(47, 58, 178);
+}
+
+.hero-hastah {
+  margin-top: -10px;
+
+  .btn-custom {
+    font-size: 13px;
+  }
+}
+
+.btn-custom:hover {
+  background-color: rgb(47, 58, 178, 0.2);
+  border: 1px solid rgb(47, 58, 178);
+}
+
+.azul {
+  color: blue;
+}
+.verde {
+  color: greenyellow;
+}
+.rosado {
+  color: pink;
+}
+
+.btn-custom:hover span {
+  text-decoration: underline;
+  color: rgb(47, 58, 178);
+}
+
+@mixin stely-btn {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary {
+  @include stely-btn();
+}
+
+.btn-secondary:hover {
+  background-color: rgb(231, 228, 228);
+}
+
+@mixin stely-emogi {
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.hero-emogi-2 {
+  @include stely-emogi();
+}
+.hero-emogi {
+  @include stely-emogi();
+}
+.hero-emogi-2 {
+  margin-left: -5px;
+}
+
+.hero-11 {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.icon-book {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  font-weight: bold;
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.icon-book:hover {
+  background-color: rgb(231, 228, 228);
+}
+
+// parte de medio segunda card
+
+.hero-3-imagen-perfil {
+  margin: 0;
+  line-height: 1;
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+}
+
+.hero-3-title-perfil {
+  margin: 0;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: bold;
+}
+.hero-3-date-perfil {
+  margin: 0;
+  line-height: 1;
+  font-size: 12px;
+}
+
+.hero-3-info-hover {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero-3-info-hover:hover {
+  background-color: rgb(224, 224, 224);
+  border-radius: 10px;
+}
+.her-3-foto-name-date {
+  margin: 0;
+  line-height: 1;
+}
+
+.card-text-hero-4 {
+  font-size: 13px;
+  font-weight: 600;
+}
+.card-text-span-hero-4 {
+  font-size: 15px;
+}
+
+.card-text-hero-4-card-2 {
+  color: $color-navbar;
+  font-size: 13px;
+}
+.hero-4-card-2 {
+  color: $color-button;
+  font-weight: bold;
+}
+
+.hero-4-card-3-necati {
+  height: 30px;
+  width: 30px;
+}
