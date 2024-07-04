@@ -15,7 +15,8 @@
           class="header-logo"
         />
         <h1 class="header-title">Crear publicación</h1>
-        <button class="header-edit-btn">Editar</button>
+        <button class="header-edit-btn">Guardar Borrador</button>
+        <button class="header-edit-btn">Publicar</button>
       </div>
     </header>
 
@@ -25,17 +26,23 @@
           >Añadir una imagen de portada</label
         >
         <input type="file" id="cover-image-input" style="display: none" />
-        <input
-          class="post-title"
-          type="text"
-          placeholder="Nuevo título de publicación aquí..."
-          style="font-weight: bold"
-        />
-        <input
-          class="post-tags"
-          type="text"
-          placeholder="Añade hasta 4 etiquetas..."
-        />
+
+        <crayons-textfield>
+          <input
+            class="post-title"
+            type="text"
+            placeholder="Nuevo título de publicación aquí..."
+            style="font-weight: bold"
+          />
+        </crayons-textfield>
+
+        <crayons-textfield>
+          <input
+            class="post-tags"
+            type="text"
+            placeholder="Añade hasta 4 etiquetas..."
+          />
+        </crayons-textfield>
 
         <div class="editor-toolbar">
           <button class="toolbar-btn bold-btn">B</button>
@@ -64,8 +71,8 @@
             publicación real en una oración corta.
           </li>
           <li>
-            Utilice palabras clave cuando sea apropiado para garantizar que las
-            personas puedan encontrar su publicación mediante la búsqueda.
+            Utiliza palabras clave cuando sea apropiado para garantizar que las
+            personas puedan encontrar tu publicación mediante la búsqueda.
           </li>
         </ul>
       </aside>
