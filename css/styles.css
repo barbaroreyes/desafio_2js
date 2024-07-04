@@ -27,21 +27,3 @@ body {
 .cardList .list-group .list-group-item #commentsList:hover {
   color: rgb(68, 68, 68);
 }/*# sourceMappingURL=styles.css.map */
-header {
-  display: flex;
-  justify-content: space-evenly;
-  border: 1px solid black;
-}
-.box1 {
-  margin-left: 10px;
-}
-.image-container{
- width:  15%;
-}
-.button_sign{
-  border: 1px solid black;
-  display:flex;
-  justify-content: flex-start;
-
-  background-color: red
-}
