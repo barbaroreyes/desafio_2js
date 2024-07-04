@@ -72,11 +72,8 @@ body {
 }
 // Estilos del side-right
 
-.hashtagList {
-  margin-top: 5rem;
-}
 .cardList {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
   .list-group {
     .list-group-item {
@@ -98,12 +95,6 @@ body {
     }
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> dev
-=======
 
 // texto parrafo de la card
 
@@ -405,32 +396,4 @@ body {
 .hero-4-card-3-necati {
   height: 30px;
   width: 30px;
-}
->>>>>>> jarolGabriel/aside-left
-
-//asideright
-
-.cardList {
-
-
-  .list-group {
-    .list-group-item {
-   
-      a {
-        text-decoration: none;
-        color: rgb(60, 60, 60);
-        font-size: 0.85rem;
-        &:hover {
-          color: rgb(0, 0, 157);
-          #commentsList {
-            color: rgb(68, 68, 68);
-        }
-      }
-      #commentsList {
-        font-size: 0.7rem;
-        color: rgb(136, 136, 136);
-       
-      }
-    }
-  }
 }

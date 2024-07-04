@@ -67,12 +67,8 @@ body {
   border-style: none;
 }
 
-.hashtagList {
-  margin-top: 5rem;
-}
-
 .cardList {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 .cardList .list-group .list-group-item a {
@@ -89,7 +85,7 @@ body {
 .cardList .list-group .list-group-item a #commentsList {
   font-size: 0.7rem;
   color: rgb(136, 136, 136);
-
+}
 
 #texto-parrafo-hove:hover {
   color: rgb(47, 58, 178);
@@ -388,4 +384,3 @@ body {
   height: 30px;
   width: 30px;
 }/*# sourceMappingURL=styles.css.map */
-}
