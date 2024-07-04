@@ -407,3 +407,30 @@ body {
   width: 30px;
 }
 >>>>>>> jarolGabriel/aside-left
+
+//asideright
+
+.cardList {
+
+
+  .list-group {
+    .list-group-item {
+   
+      a {
+        text-decoration: none;
+        color: rgb(60, 60, 60);
+        font-size: 0.85rem;
+        &:hover {
+          color: rgb(0, 0, 157);
+          #commentsList {
+            color: rgb(68, 68, 68);
+        }
+      }
+      #commentsList {
+        font-size: 0.7rem;
+        color: rgb(136, 136, 136);
+       
+      }
+    }
+  }
+}
