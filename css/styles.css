@@ -19,8 +19,7 @@ body {
 
 .form-control:focus {
   border-color: rgb(44, 45, 215);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   border-width: 2px;
 }
 
@@ -67,23 +66,28 @@ body {
   border-style: none;
 }
 
+.hashtagList {
+  margin-bottom: 1rem;
+}
+
 .cardList {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 2rem;
 }
 .cardList .list-group .list-group-item a {
   text-decoration: none;
   color: rgb(60, 60, 60);
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 .cardList .list-group .list-group-item a:hover {
   color: rgb(0, 0, 157);
 }
-.cardList .list-group .list-group-item a:hover #commentsList {
-  color: rgb(68, 68, 68);
+
+#commentsList {
+  font-size: 0.85rem;
+  color: rgb(136, 136, 136);
 }
-.cardList .list-group .list-group-item a #commentsList {
-  font-size: 0.7rem;
+#commentsList:hover {
   color: rgb(136, 136, 136);
 }
 
@@ -99,7 +103,6 @@ body {
   background-color: white;
   color: rgb(47, 58, 178);
   border: 1px solid rgb(0, 0, 157);
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -129,7 +132,6 @@ body {
   text-decoration: none;
   padding: 5px;
   color: gray;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -160,7 +162,6 @@ body {
 .hero-hover-palabras {
   padding: 5px;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -185,7 +186,6 @@ body {
 
 .list-gruop-hover {
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -230,7 +230,6 @@ body {
 
 .card-text {
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -275,7 +274,6 @@ body {
   background-color: white;
   color: black;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -314,7 +312,6 @@ body {
   padding: 5px;
   margin-left: 10px;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -347,7 +344,6 @@ body {
 .hero-3-info-hover {
   padding: 5px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -388,7 +384,6 @@ body {
 .hero-hover-palabras {
   padding: 5px;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -413,7 +408,6 @@ body {
 
 .list-gruop-hover {
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -434,7 +428,6 @@ body {
 
 .bi-three-dots {
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -453,7 +446,6 @@ body {
   padding: 5px;
   font-size: 20px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 

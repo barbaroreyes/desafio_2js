@@ -72,27 +72,31 @@ body {
 }
 // Estilos del side-right
 
+.hashtagList {
+  margin-bottom: 1rem;
+}
 .cardList {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 2rem;
   .list-group {
     .list-group-item {
       a {
         text-decoration: none;
         color: rgb(60, 60, 60);
-        font-size: 0.85rem;
+        font-size: 1rem;
         &:hover {
           color: rgb(0, 0, 157);
-          #commentsList {
-            color: rgb(68, 68, 68);
-          }
-        }
-        #commentsList {
-          font-size: 0.7rem;
-          color: rgb(136, 136, 136);
         }
       }
     }
+  }
+}
+
+#commentsList {
+  font-size: 0.85rem;
+  color: rgb(136, 136, 136);
+  &:hover {
+    color: rgb(136, 136, 136);
   }
 }
 
