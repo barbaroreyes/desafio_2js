@@ -19,8 +19,7 @@ body {
 
 .form-control:focus {
   border-color: rgb(44, 45, 215);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   border-width: 2px;
 }
 
@@ -68,28 +67,29 @@ body {
 }
 
 .hashtagList {
-  margin-top: 5rem;
+  margin-bottom: 1rem;
 }
 
 .cardList {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-bottom: 2rem;
 }
 .cardList .list-group .list-group-item a {
   text-decoration: none;
   color: rgb(60, 60, 60);
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 .cardList .list-group .list-group-item a:hover {
   color: rgb(0, 0, 157);
 }
-.cardList .list-group .list-group-item a:hover #commentsList {
-  color: rgb(68, 68, 68);
-}
-.cardList .list-group .list-group-item a #commentsList {
-  font-size: 0.7rem;
-  color: rgb(136, 136, 136);
 
+#commentsList {
+  font-size: 0.85rem;
+  color: rgb(136, 136, 136);
+}
+#commentsList:hover {
+  color: rgb(136, 136, 136);
+}
 
 #texto-parrafo-hove:hover {
   color: rgb(47, 58, 178);
@@ -103,7 +103,6 @@ body {
   background-color: white;
   color: rgb(47, 58, 178);
   border: 1px solid rgb(0, 0, 157);
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -133,7 +132,6 @@ body {
   text-decoration: none;
   padding: 5px;
   color: gray;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -164,7 +162,6 @@ body {
 .hero-hover-palabras {
   padding: 5px;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -189,7 +186,6 @@ body {
 
 .list-gruop-hover {
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -234,7 +230,6 @@ body {
 
 .card-text {
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -279,7 +274,6 @@ body {
   background-color: white;
   color: black;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -318,7 +312,6 @@ body {
   padding: 5px;
   margin-left: 10px;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -351,7 +344,6 @@ body {
 .hero-3-info-hover {
   padding: 5px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -387,5 +379,94 @@ body {
 .hero-4-card-3-necati {
   height: 30px;
   width: 30px;
-}/*# sourceMappingURL=styles.css.map */
 }
+
+.hero-hover-palabras {
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hover-palabra-active {
+  font-weight: bold;
+}
+
+.hero-hover-palabras:hover {
+  background-color: white;
+  color: rgb(47, 58, 178);
+  border-radius: 10px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.btn-extra-sm {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.list-gruop-hover {
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.list-gruop-hover:hover {
+  color: rgb(47, 58, 178);
+}
+
+.border-0 {
+  background-color: rgb(240, 243, 247);
+}
+
+.card-logo-her0-2 {
+  height: 30px;
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bi-three-dots {
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bi-three-dots:hover {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(231, 225, 225);
+}
+
+.fw-300-C-D {
+  font-size: 13px;
+}
+
+.bi-social-media {
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.bi-social-media:hover {
+  background-color: rgba(47, 58, 178, 0.2);
+}
+
+.font-inconsolas {
+  font-family: "Inconsolata", monospace;
+}
+
+.list-group-hero-2 {
+  background-color: rgb(240, 243, 247);
+}
+
+.lista-group-item-hero-2:hover {
+  background-color: white;
+}
+
+.color-transparente-movil {
+  background-color: rgba(153, 152, 152, 0.5);
+  height: 100%;
+  padding: 20px;
+}/*# sourceMappingURL=styles.css.map */

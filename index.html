@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
-
+  <!--css-->
   <link rel="stylesheet" href="./css/styles.css">
   <title>Document</title>
 </head>
@@ -23,6 +23,8 @@
       <div class="container d-flex justify-content between">
         <div class="container-group1">
           <div class="container-group1__search d-flex align-items-center">
+            <a href="./menuTLFN.html"><button class="border-0 fs-2  d-block d-sm-none"><i
+                  class="bi bi-list"></i></button></a>
             <button class="btn-logo"><img class="imgLogo"
                 src="https://media.dev.to/cdn-cgi/image/quality=100/https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
                 alt="
@@ -31,18 +33,19 @@
               <div class="container-fluid d-flex align-items-center">
                 <form class="d-flex">
                   <button class="btn-search"><img src="img/icon_search.png" alt="imgsearch"></button>
-                  <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                  <input class="form-control me-2 d-none d-sm-block" type="search" placeholder="Search..."
+                    aria-label="Search">
                 </form>
               </div>
             </nav>
 
           </div>
         </div>
-        <div class="container-group2">
-          <a href="./login.html" target="_blank" rel="noopener noreferrer"><button type="button" id="boton-card-2"
-              class="btn btn-outline-primary border-0 p-2 ">Log in </button> </a>
-
-          <button type="button" class="btn btn-outline-primary btn-underline">Create Account</button>
+        <div class="container-group2 d-flex  align-items-center">
+          <a href="./login.html" target="_blank" rel="noopener noreferrer" class=""><button type="button"
+              id="boton-card-2" class="btn btn-outline-primary border-0 p-2">Log in</button> </a>
+          <button type="button" class="btn btn-outline-primary w-60 fw-bold fs-5" id="boton-card-1">Create
+            Account</button>
 
         </div>
       </div>
@@ -50,7 +53,7 @@
   </header>
   <div class="container">
     <div class="row">
-      <div class="col-md-3  d-none d-md-block">
+      <div class="col-md-3  d-none d-md-block mt-1">
         <div class="card card-hero-1 mt-3">
 
           <div class="card-body">
@@ -74,7 +77,7 @@
           <div class=" card-body p-0">
             <button type="button" class="btn btn-outline-primary border-0 w-100 mt-0 d-flex align-items-center"
               id="boton-card-2">
-              <p class="mb-0 me-2 fs-4">🏠</p> <span class="text-dark fs-5">Hogar</span>
+              <p class="mb-0 me-2 fs-4">🏠</p> <span class="text-dark">Hogar</span>
             </button>
             <button type="button" class="btn btn-outline-primary border-0 w-100 d-flex align-items-center"
               id="boton-card-2">
@@ -106,7 +109,7 @@
             </button>
             <button type="button" class="btn btn-outline-primary border-0 w-100 d-flex align-items-center"
               id="boton-card-2">
-              <p class="mb-0 fs-4">✨</p><span class="text-dark">Exibicion</span>
+              <p class="mb-0 fs-4">✨</p><span class="text-dark">Exibición</span>
             </button>
             <button type="button" class="btn btn-outline-primary border-0 w-100 mt-0 d-flex align-items-center"
               id="boton-card-2">
@@ -225,11 +228,11 @@
               </div>
               <img src="./img/become-a-moderatro.png" class="card-img-top" alt="Become a moderator">
               <div class="card-body">
-                <p class="card-text-hero-4"><span class="card-text fs-5 fw-bold">Fill
+                <p><span class="card-text fs-5 fw-bold">Fill
                     out this
-                    survey</span> and
-                  help us moderate
-                  our community by becoming a tag moderator here at DEV.</p>
+                    survey</span><span class="" id="texto-parrafo-hove">and
+                    help us moderate
+                    our community by becoming a tag moderator here at DEV. </span></p>
 
               </div>
             </div>
@@ -256,8 +259,8 @@
 
       </div>
 
-      <div class="col-lg-6">
-        <div class=" d-flex text-center gap-3 mt-3">
+      <div class="col-lg-5">
+        <div class=" d-flex text-center gap-3 mt-4">
           <p class="hero-hover-palabras hover-palabra-active">importante</p>
           <p class="hero-hover-palabras">El ultimo</p>
           <p class="hero-hover-palabras">Arriba</p>
@@ -271,7 +274,10 @@
                 <img class="hero-image-badge" src="./img/perfil/cuadro-com_uploads_organizat.png" alt="">
                 <h5 class="card-title">Jake Page <span>for</span> Glasskube</h5>
               </div>
-
+              <div class="card-body car-body-perfil d-flex justify-content-start align-items-center ">
+                <img class="hero-imagen-perfil " src="./img/perfil/pexels-adreyat-1.jpg" alt="">
+                <h5 class="card-title">May 27</h5>
+              </div>
 
             </div>
 
@@ -349,7 +355,8 @@
           </div>
         </div>
       </div>
-      <div class="hashtagList col mt-0">
+
+      <div class="hashtagList col-md-4 d-md-block d-none mt-0">
         <div class="cardList" id="ccsPosts">
           <ul class="list-group">
             <li class="list-group-item">
@@ -431,16 +438,84 @@
             </li>
           </ul>
         </div>
+        <!--aside right si fondo ni border-->
+
+        <div class="">
+          </ul>
+          <ul class="list-group list-group-hero-2 border-0">
+            <p class="font-inconsolas fw-bold mt-3 fs-4">guia/recursos de tendencia</p>
+            <li class="list-group-item lista-group-item-hero-2 border-0"><span class="list-gruop-hover fs-6">Las 50
+                preguntas
+                principales
+                de
+                la entrevista sobre diseno de sistesmas para 2024</span>
+
+            </li>
+            <li class="list-group-item lista-group-item-hero-2 border-0 mt-3"><span class="list-gruop-hover fs-6">Cinco
+                habilidades que los programadores y desarrolladores
+                deberian aprender en 2024</span>
+            </li>
+            <li class="list-group-item lista-group-item-hero-2 border-0 mt-3"><span
+                class="list-gruop-hover fs-6">Array.reduce() tiene cabra 🐐✨</span>
+            </li>
+            <li class="list-group-item lista-group-item-hero-2 border-0 mt-3"><span
+                class="list-gruop-hover fs-6">Dominar el diseno de bases de datos relacionales: una guia
+                completa</span>
+            </li>
+            <li class="list-group-item lista-group-item-hero-2 border-0 mt-4"><span class="list-gruop-hover fs-6">No
+                eres un ingeniero de software; eres un
+                "frameworker"</span>
+            </li>
+            <li class="list-group-item lista-group-item-hero-2 border-0 mt-4 border-bottom"><span
+                class="list-gruop-hover fs-6">🕸️Tendencia de desarrollo de software en 2024 👀</span>
+            </li>
+            <span class=""></span>
+          </ul>
+          <div class="">
+            <ul class="list-group list-group-hero-2 border-0">
+              <li class="list-group-item lista-group-item-hero-2 border-0"><span class="list-gruop-hover fs-6">GPT-4o:
+                  Aprenda como implementar un RAG en el nuevo
+                  modelo, paso a paso!</span>
+
+              </li>
+              <li class="list-group-item lista-group-item-hero-2 border-0 mt-3"><span class="list-gruop-hover fs-6">Por
+                  que nadie crece quierendo ser ingeniero
+                  DevOps</span>
+              </li>
+              <li class="list-group-item lista-group-item-hero-2 border-0 mt-3"><span
+                  class="list-gruop-hover fs-6">Array.reduce() tiene cabra 🐐✨</span>
+              </li>
+              <li class="list-group-item lista-group-item-hero-2 border-0 mt-3"><span
+                  class="list-gruop-hover fs-6">Diferencia entre apache Kafka, RabbitMQ</span>
+              </li>
+              <li class="list-group-item lista-group-item-hero-2 border-0 mt-4"><span class="list-gruop-hover fs-6">Las
+                  17 mejores herramientas de productivida para
+                  desarrolladores para probar</span>
+              </li>
+              <li class="list-group-item lista-group-item-hero-2 border-0 mt-4"><span
+                  class="list-gruop-hover fs-6">Mejore su productividad usando mas terminal y menos
+                  mouse (🚀)</span>
+              </li>
+              <li class="list-group-item lista-group-item-hero-2 border-0 mt-4"><span class="list-gruop-hover fs-6">Cree
+                  una increible cartera de desarrolladores de
+                  GitHub</span>
+              </li>
+            </ul>
+          </div>
+
+
+        </div>
+
       </div>
+
+
     </div>
 
-  </div>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
