@@ -1,77 +1,92 @@
-// JavaScript para manejo de etiquetas
-const tagInput = document.getElementById('tagInput');
-const tagContainer = document.querySelector('.tag-input');
-let tags = [];
+<<<<<<< HEAD
+=======
+javascript 
+>>>>>>> dev
+// Configuración de Firebase
+const firebaseConfig = {
+  apiKey: "tu-api-key",
+  authDomain: "tu-auth-domain",
+  databaseURL: "https://proyectokode-default-rtdb.firebaseio.com/",
+  projectId: "proyectokode",
+  storageBucket: "proyectokode.appspot.com",
+  messagingSenderId: "884908296506",
+  appId: "1:884908296506:web:5f9ba59ab34cade1682803"
+};
 
-tagInput.addEventListener('keypress', function(e) {
-  if (e.key === 'Enter' && tagInput.value) {
-    e.preventDefault();
-    addTag(tagInput.value);
-    tagInput.value = '';
-  }
-});
+// Inicializar Firebase
+firebase.initializeApp(firebaseConfig);
 
-function addTag(tag) {
-  if (tags.length < 4 && !tags.includes(tag)) {
-    tags.push(tag);
-    const tagElement = document.createElement('span');
-    tagElement.className = 'tag';
-    tagElement.textContent = tag;
-    const removeIcon = document.createElement('span');
-    removeIcon.textContent = 'x';
-    removeIcon.className = 'remove-tag';
-    removeIcon.onclick = () => removeTag(tag);
-    tagElement.appendChild(removeIcon);
-    tagContainer.insertBefore(tagElement, tagInput);
+// Obtener referencia a la base de datos
+const database = firebase.database();
+
+// Event listener para el botón de publicar en el header
+document.querySelector('.header .publish-btn').addEventListener('click', publishPost);
+
+// Event listener para el botón de guardar borrador en el header
+document.querySelector('.header .header-edit-btn').addEventListener('click', saveDraft);
+
+// Event listener para el botón de publicar en el footer
+document.querySelector('.footer .publish-btn').addEventListener('click', publishPost);
+
+// Event listener para el botón de guardar borrador en el footer
+document.querySelector('.footer .save-draft-btn').addEventListener('click', saveDraft);
+
+// Función para publicar una nueva publicación
+function publishPost() {
+  const title = document.querySelector('.post-title').value;
+  const tags = document.querySelector('.post-tags').value;
+  const content = document.querySelector('.post-content').value;
+
+  // Validar entradas
+  if (!title || !tags || !content) {
+    alert("Por favor, completa todos los campos.");
+    return;
   }
+
+  // Añadir una nueva publicación
+  const newPostKey = database.ref().child('posts').push().key;
+  const postData = {
+    title: title,
+    tags: tags,
+    content: content,
+    createdAt: firebase.database.ServerValue.TIMESTAMP
+  };
+
+  const updates = {};
+  updates['/posts/' + newPostKey] = postData;
+
+  database.ref().update(updates)
+    .then(() => {
+      console.log("Publicación creada exitosamente!");
+      alert("Publicación creada exitosamente!");
+      // Limpiar formulario
+      document.querySelector('.post-title').value = '';
+      document.querySelector('.post-tags').value = '';
+      document.querySelector('.post-content').value = '';
+    })
+    .catch((error) => {
+      console.error("Error al crear la publicación: ", error);
+      alert("Error al crear la publicación.");
+    });
 }
 
-function removeTag(tag) {
-  tags = tags.filter(t => t !== tag);
-  renderTags();
-}
+// Función para guardar un borrador de la publicación
+function saveDraft() {
+  const title = document.querySelector('.post-title').value;
+  const tags = document.querySelector('.post-tags').value;
+  const content = document.querySelector('.post-content').value;
 
-function renderTags() {
-  const existingTags = document.querySelectorAll('.tag');
-  existingTags.forEach(tag => tag.remove());
-  tags.forEach(tag => addTag(tag));
-}
-
-// JavaScript para validación y redirección
-document.getElementById('createPostForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  if (this.checkValidity() && tags.length > 0) {
-    alert('Post creado exitosamente');
-    window.location.href = 'vista_principal.html';
-  } else {
-    alert('Por favor, completa todos los campos y añade al menos una etiqueta.');
-  }
-});
-
-// JavaScript para barra de herramientas de formato
-document.querySelectorAll('.toolbar-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const action = this.getAttribute('aria-label').toLowerCase();
-    formatText(action);
-  });
-});
-
-function formatText(action) {
-  const content = document.getElementById('content');
-  const start = content.selectionStart;
-  const end = content.selectionEnd;
-  const selectedText = content.value.substring(start, end);
-
-  let formattedText;
-  switch (action) {
-    case 'negrita':
-      formattedText = `**${selectedText}**`;
-      break;
-    case 'itálico':
-      formattedText = `*${selectedText}*`;
-      break;
-    // Agregar casos para otros formatos aquí...
+  // Validar entradas
+  if (!title || !tags || !content) {
+    alert("Por favor, completa todos los campos.");
+    return;
   }
 
-  content.setRangeText(formattedText, start, end, 'end');
+  
+  alert("");
+
+  // Limpiar formulario si es necesario
+  document.querySelector('.post-title').value = '';
+  document.querySelector('.post-tags').value = '';
+  document.querySelector('.post-content').value = '';
 }
