@@ -1,6 +1,5 @@
 body {
   background-color: #f5f6f7;
-
   font-family: var(--ff-sans-serif);
   padding: 0;
   margin: 0;
@@ -139,7 +138,6 @@ body {
   border: 1px solid rgb(255, 255, 255);
   padding: 10px;
   font-size: 16px;
-
   border-radius: 4px;
 }
 
@@ -176,7 +174,6 @@ body {
   color: #fff;
   border: none;
   padding: 10px 20px;
-  margin-left: 99px;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -184,4 +181,14 @@ body {
 .save-draft-btn,
 .revert-btn {
   background: #666;
+}
+.ml-3,
+.mx-3 {
+  margin-left: 7rem !important;
+}
+.col-auto {
+  -ms-flex: 0 0 auto;
+  flex: 1 0 auto;
+  width: auto;
+  max-width: 100%;
 }
