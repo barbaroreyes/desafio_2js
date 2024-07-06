@@ -175,6 +175,7 @@ const crearCard = (post) => {
 
   boton4.appendChild(spanDesarrollo);
   divHastags.appendChild(boton4);
+  cardOpinionReaccion.appendChild(divHastags);
 
   //=============
 
