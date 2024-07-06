@@ -39,7 +39,7 @@ function sortByDate(data) {
 }
 
 function sortByTop(data) {
-  return data.sort(() => Math.random() - 0.5);
+  return data.sort((a, b) => b.reacciones - a.reacciones);
 }
 
 // funciones de los botenes Import top y last
