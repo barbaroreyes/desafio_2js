@@ -185,3 +185,9 @@ body {
 .revert-btn {
   background: #666;
 }
+.col-auto {
+  -ms-flex: 0 0 auto;
+  flex: 1 0 auto;
+  width: auto;
+  max-width: 100%;
+}
