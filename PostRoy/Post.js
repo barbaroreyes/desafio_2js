@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-javascript 
->>>>>>> dev
 // Configuración de Firebase
 const firebaseConfig = {
   apiKey: "tu-api-key",
