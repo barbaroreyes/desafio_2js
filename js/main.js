@@ -1,29 +1,4 @@
-<<<<<<< HEAD
 // Obtener datos de Firebase
-=======
-const posts = [
-  { id: 1, text: "Post CCS 1", hashtags: ["#css"] },
-  { id: 2, text: "Post CCS 2", hashtags: ["#css"] },
-  { id: 3, text: "Post CCS 3", hashtags: ["#css"] },
-  { id: 4, text: "Post CCS 4", hashtags: ["#css"] },
-  { id: 5, text: "Post CCS 5", hashtags: ["#css"] },
-  { id: 6, text: "Post Javascript 1", hashtags: ["#javascript"] },
-  { id: 7, text: "Post Javascript 2", hashtags: ["#javascript"] },
-  { id: 8, text: "Post Javascript 3", hashtags: ["#javascript"] },
-  { id: 9, text: "Post Javascript 4", hashtags: ["#javascript"] },
-  { id: 10, text: "Post Javascript 5", hashtags: ["#javascript"] },
-  { id: 11, text: "Post React 1", hashtags: ["#react"] },
-  { id: 12, text: "Post React 2", hashtags: ["#react"] },
-  { id: 13, text: "Post React 3", hashtags: ["#react"] },
-  { id: 14, text: "Post React 4", hashtags: ["#react"] },
-  { id: 15, text: "Post React 5", hashtags: ["#react"] },
-  { id: 16, text: "Post React 5", hashtags: ["#react"] },
-  { id: 17, text: "Post React 5", hashtags: ["#react"] },
-  { id: 18, text: "Post React 5", hashtags: ["#react"] },
-  { id: 19, text: "Post React 5", hashtags: ["#react"] },
-  { id: 20, text: "Post React 5", hashtags: ["#react"] },
-];
->>>>>>> f7d5201322b8cde46d04bc30684724a1ea7712d3
 
 const BASE_URL = "https://proyectokode-default-rtdb.firebaseio.com/posts";
 
@@ -133,10 +108,5 @@ const renderPosts = (postsByHashtag) => {
   });
 };
 
-<<<<<<< HEAD
 // Llamar a la función principal que inicia todo
 printAllPosts();
-=======
-// Llamar a la función para renderizar los posts
-renderPosts();
->>>>>>> f7d5201322b8cde46d04bc30684724a1ea7712d3
