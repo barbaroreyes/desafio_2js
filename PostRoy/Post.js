@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Configuración de Firebase
 const firebaseConfig = {
   apiKey: "tu-api-key",
@@ -8,6 +9,14 @@ const firebaseConfig = {
   messagingSenderId: "884908296506",
   appId: "1:884908296506:web:5f9ba59ab34cade1682803"
 };
+=======
+// JavaScript para manejo de etiquetas
+import{createPost} from "../js/module.js";
+
+const tagInput = document.getElementById('tagInput');
+const tagContainer = document.querySelector('.tag-input');
+let tags = [];
+>>>>>>> barbarito
 
 // Inicializar Firebase
 firebase.initializeApp(firebaseConfig);
