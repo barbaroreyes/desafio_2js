@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="/PostRoy/Post.css" />
+    <link rel="stylesheet" href="Post.css" />
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <!-- Add Firebase products that you want to use -->
@@ -59,6 +59,11 @@
             />
           </crayons-textfield>
 
+          <div class="date-field">
+            <label for="post-date">Fecha de creación</label>
+            <input id="post-date" class="post-date" type="date" />
+          </div>
+
           <div class="editor-toolbar">
             <button class="toolbar-btn bold-btn">B</button>
             <button class="toolbar-btn italic-btn">I</button>
@@ -104,6 +109,6 @@
       </div>
     </footer>
 
-    <script src="/PostRoy/Post.js"></script>
+    <script src="Post.js"></script>
   </body>
 </html>
