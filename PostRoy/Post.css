@@ -1,20 +1,21 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  margin: 0;
+  background-color: #f5f6f7;
+
+  font-family: var(--ff-sans-serif);
   padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
-  background-color: #fff;
-  border-bottom: 1px solid #e5e7eb;
+  background-color: #f5f6f7;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -67,7 +68,11 @@ body {
 
 .main-container {
   display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: flex-start; /* Alinear elementos arriba */
   padding: 20px;
+  margin: 0 auto; /* Ajustar márgenes para centrar en la página */
+  max-width: 1200px; /* Opcional: Establecer un ancho máximo */
 }
 
 .post-creation {
@@ -75,13 +80,15 @@ body {
   margin-right: 20px;
   background: #fff;
   padding: 20px;
-
-  border-radius: 8px;
+  border: 1px solid #ddd; /* Definir el borde */
+  border-radius: 8px; /* Mantener las esquinas redondeadas */
+  width: 50px; /* Ancho fijo */
+  height: 500px; /* Alto fijo */
 }
 
 .cover-image-btn {
   background: #ffffff;
-  border: 1px solid #ddd;
+  border: 3px solid #ddd;
   padding: 10px;
   width: 100%;
   font-size: 16px;
@@ -111,14 +118,15 @@ body {
 }
 
 .editor-toolbar {
+  background-color: #f5f6f7;
   display: flex;
   gap: 38px;
   margin-bottom: 10px;
 }
 
 .toolbar-btn {
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #f5f6f7;
+  border: 1px solid #f5f6f7;
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
@@ -126,19 +134,18 @@ body {
 }
 
 .post-content {
-  width: 100%;
+  width: 94%;
   height: 200px;
   border: 1px solid rgb(255, 255, 255);
   padding: 10px;
   font-size: 16px;
-  outline: none;
+
   border-radius: 4px;
 }
 
 .tips {
   flex: 1;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #f5f6f7;
   padding: 20px;
   border-radius: 8px;
 }
@@ -159,11 +166,9 @@ body {
 }
 
 .footer {
-  display: flex center;
-  justify-content: flex-end;
+  flex-shrink: 0; /* Evitar que se reduzca */
   padding: 20px;
-  background: #fff;
-  border-top: 1px solid #ddd;
+  background: #f5f6f7;
 }
 
 .footer button {
@@ -171,7 +176,7 @@ body {
   color: #fff;
   border: none;
   padding: 10px 20px;
-  margin-left: 10px;
+  margin-left: 99px;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -179,4 +184,10 @@ body {
 .save-draft-btn,
 .revert-btn {
   background: #666;
+}
+.col-auto {
+  -ms-flex: 0 0 auto;
+  flex: 1 0 auto;
+  width: auto;
+  max-width: 100%;
 }
