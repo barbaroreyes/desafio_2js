@@ -3,7 +3,6 @@ const buttomUltimo = document.getElementById("el-ultimo");
 const buttomTop = document.getElementById("top");
 
 import { crearCard } from "./card.js";
-
 const BASE_URL = "https://proyectokode-default-rtdb.firebaseio.com/posts";
 
 const getAllPosts = async () => {

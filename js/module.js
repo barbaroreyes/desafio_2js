@@ -23,4 +23,4 @@ const createPost = async (postObject) => {
 
 /* dont' touch */
 
-export { getAllPosts, createPost };
+export { getAllPosts, createPost, BASE_URL };
