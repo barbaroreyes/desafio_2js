@@ -201,11 +201,17 @@ body {
 .hover-palabra-active {
   font-weight: bold;
 }
+
+.hidden {
+  display: none;
+}
+
 .hero-hover-palabras:hover {
   background-color: white;
   color: $color-button;
   border-radius: 10px;
 }
+
 .fs-12 {
   font-size: 12px;
 }
