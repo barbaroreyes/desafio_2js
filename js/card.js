@@ -1,62 +1,53 @@
-/*
-<div id="card-container">
-          <div class="card mb-3" id="car-principal">
-            <div class="p-4 pb-0 d-flex justify-content-start align-items-center her-3-foto-name-date"
-              id="card-infor-perfil">
-              <img src="./img/perfil/pexels-jeferson-santos-4.jpg"
-                class="hero-3-imagen-perfil card-img-top rounded-circle m-2" alt="chica posandojunto a una piedra"
-                id="card-img">
-              <div class="hero-3-info-hover d-flex flex-column gap-0" id="div-name-date">
-                <h6 class="hero-3-title-perfil" id="card-name">Pradumma Saraf</h6>
-                <p class="hero-3-date-perfil" id="date">28 de mayo</p>
-              </div>
-            </div>
-            <div class="card-body her-3-foto-name-date" id="card-opinion-reaccion">
-              <p class="card-text" id="card-title">Como utilizar indicadores de funciones para implementaciones
-                por etapas
-              </p>
-                //=======================================
-              <div class="hero-hastah" id="card-hastag">
-                <button type="button" class="btn btn-custom boton1"><span class="azul span1">#</span>fuente
-                  abierta</button>
-                <button type="button" class="btn btn-custom boton2"><span class="verde span2">#</span>
-                  devops</button>
-                <button type="button" class="btn btn-custom boton3"><span
-                    class="rosado span3">#</span>desarrollador</button>
-                <button type="button" class="btn btn-custom boton4"><span class="rosado span4">#</span>desarrollo</button>
-              </div>
-              //====================
-              <div class="hero-caras-animaciones d-flex justify-content-center align-items-center"
-                id="div-reacciones-comentaior">
-                <button type="button" class="btn btn-secondary btn-lg boton-2">
-                  <div class="d-flex justify-content-center align-items-center div-emogi">
-                    <p class="hero-emogi mb-0">&#129505;</p>15
-                    reaccion
-                  </div>
-                </button>
-                <button type="button" class="btn btn-secondary btn-lg d-flex boton-2">
-                  <i class="bi bi-chat div-icon"></i>add comentarios</button>
-                <div class="hero-minute d-flex justify-content-center ms-auto div-min-icon">
+import {
+  getAllPosts,
+  buttomImport,
+  buttomUltimo,
+  buttomTop,
+  renderCards,
+} from "./module.js";
 
-                  <p class="hero-11">4 min read</p>
-                  <i class="icon-book bi bi-bookmark"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+document.addEventListener("DOMContentLoaded", async () => {
+  const posts = await getAllPosts();
+  renderCards(posts); // Renderiza las tarjetas al cargar la página
+});
 
-*/
+let ObjetoUser = {};
+let userArray = [];
 
-const imageURL = "./img/perfil/pexels-jeferson-santos-4.jpg";
-const nombreUsuario = "Pradumma Saraf";
-const fecha = "28 de mayo";
-const tituloPost =
-  "Como utilizar indicadores de funciones para implementaciones por etapas";
-const hastagAzul = "#fuente abierta";
-const hastagVerde = "#devops";
-const hastagRosado = "#desarrollador";
-const hastagDesarrollo = "#desarrollo";
+const cargarCardsDesdeFirebase = async () => {
+  const posts = await getAllPosts();
+  posts.forEach((post) => {
+    // Crear un nuevo objeto para cada post
+    ObjetoUser = {
+      name: post.name,
+      abstract: post.abstract,
+      content: post.content,
+      date: post.date,
+      importance: post.importance,
+      picture: post.picture,
+      reacciones: post.reacciones,
+      tags: post.tags,
+      title: post.title,
+    };
+
+    // Agregar el objeto al array
+    userArray.push(ObjetoUser);
+  });
+
+  // Aquí puedes ver los datos almacenados en userArray
+  console.log(userArray);
+
+  // Ahora puedes utilizar los datos almacenados en userArray
+  userArray.forEach((user) => {
+    crearCard(user);
+  });
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  cargarCardsDesdeFirebase();
+});
+
+//======================
 
 const crearCard = (post) => {
   const cardContainer = document.getElementById("card-container");
@@ -83,7 +74,7 @@ const crearCard = (post) => {
     "rounded-circle",
     "m-2"
   );
-  imagenPerfil.src = imageURL;
+  imagenPerfil.src = post.picture;
   imagenPerfil.alt = "chica posando junto a una piedra";
   imagenPerfil.id = "card-img";
   cardInfoPerfil.appendChild(imagenPerfil);
@@ -97,16 +88,16 @@ const crearCard = (post) => {
   );
   divNameDate.id = "div-name-date";
 
-  const nombre = document.createElement("h5");
+  const nombre = document.createElement("h6");
   nombre.classList.add("hero-3-title-perfil");
   nombre.id = "card-name";
-  nombre.textContent = nombreUsuario;
+  nombre.textContent = post.name;
   divNameDate.appendChild(nombre);
 
   const fechaPublicacion = document.createElement("p");
   fechaPublicacion.classList.add("hero-3-date-perfil");
   fechaPublicacion.id = "date";
-  fechaPublicacion.textContent = fecha;
+  fechaPublicacion.textContent = post.date;
   divNameDate.appendChild(fechaPublicacion);
 
   cardInfoPerfil.appendChild(divNameDate);
@@ -119,7 +110,7 @@ const crearCard = (post) => {
   const textoPost = document.createElement("p");
   textoPost.classList.add("card-text");
   textoPost.id = "card-title";
-  textoPost.textContent = tituloPost;
+  textoPost.textContent = post.content;
   cardOpinionReaccion.appendChild(textoPost);
 
   //===================
@@ -130,50 +121,62 @@ const crearCard = (post) => {
 
   const boton1 = document.createElement("button");
   boton1.type = "button";
-  boton1.classList.add("btn", "btn-custom", "boton1");
+  boton1.classList.add("btn", "btn-custom", "mt-2");
 
   const spanAzul = document.createElement("span");
   spanAzul.classList.add("azul");
-  spanAzul.textContent = hastagAzul;
+  spanAzul.textContent = "#";
+
+  const textoHastag1 = document.createTextNode("fuente abierta");
 
   boton1.appendChild(spanAzul);
+  boton1.appendChild(textoHastag1);
   divHastags.appendChild(boton1);
 
   // Para el botón 2
   const boton2 = document.createElement("button");
   boton2.type = "button";
-  boton2.classList.add("btn", "btn-custom", "boton2");
+  boton2.classList.add("btn", "btn-custom", "mt-2");
 
   const spanVerde = document.createElement("span");
   spanVerde.classList.add("verde");
-  spanVerde.textContent = hastagVerde;
+  spanVerde.textContent = "#";
+
+  const textoHastag2 = document.createTextNode("devops");
 
   boton2.appendChild(spanVerde);
+  boton2.appendChild(textoHastag2);
   divHastags.appendChild(boton2);
 
   // Para el botón 3
 
   const boton3 = document.createElement("button");
   boton3.type = "button";
-  boton3.classList.add("btn", "btn-custom", "boton3");
+  boton3.classList.add("btn", "btn-custom", "mt-2");
 
   const spanRosado = document.createElement("span");
   spanRosado.classList.add("rosado");
-  spanRosado.textContent = hastagRosado;
+  spanRosado.textContent = "#";
+
+  const textoHastag3 = document.createTextNode("desarrollador");
 
   boton3.appendChild(spanRosado);
+  boton3.appendChild(textoHastag3);
   divHastags.appendChild(boton3);
 
   // Para el botón 4
   const boton4 = document.createElement("button");
   boton4.type = "button";
-  boton4.classList.add("btn", "btn-custom", "boton4");
+  boton4.classList.add("btn", "btn-custom", "mt-2");
 
   const spanDesarrollo = document.createElement("span");
   spanDesarrollo.classList.add("rosado");
-  spanDesarrollo.textContent = hastagDesarrollo;
+  spanDesarrollo.textContent = "#";
+
+  const textoHastag4 = document.createTextNode("desarrollador");
 
   boton4.appendChild(spanDesarrollo);
+  boton4.appendChild(textoHastag4);
   divHastags.appendChild(boton4);
   cardOpinionReaccion.appendChild(divHastags);
 
@@ -205,7 +208,7 @@ const crearCard = (post) => {
   spanEmoji.innerHTML = "&#129505;";
 
   const spanReacciones = document.createElement("span");
-  spanReacciones.textContent = "15 reacciones";
+  spanReacciones.textContent = `${post.reacciones} reacciones`;
 
   divEmogi.appendChild(spanEmoji);
   divEmogi.appendChild(document.createTextNode(" "));
@@ -226,9 +229,11 @@ const crearCard = (post) => {
   );
 
   const iconoChat = document.createElement("i");
-  iconoChat.classList.add("bi", "bi-chat", "div-icon");
+  iconoChat.classList.add("bi", "bi-chat", "me-1");
   botonComentarios.appendChild(iconoChat);
-  botonComentarios.textContent = "add comentarios";
+
+  const textoComentarios = document.createTextNode(" add comentarios");
+  botonComentarios.appendChild(textoComentarios);
   divReaccionesComentarios.appendChild(botonComentarios);
 
   const divMinutos = document.createElement("div");
@@ -260,3 +265,5 @@ const crearCard = (post) => {
 document.addEventListener("DOMContentLoaded", function () {
   crearCard();
 });
+
+export { crearCard };
