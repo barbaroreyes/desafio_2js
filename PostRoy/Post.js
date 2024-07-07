@@ -22,6 +22,51 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('.footer .publish-btn').addEventListener('click', publishPost);
   document.querySelector('.footer .save-draft-btn').addEventListener('click', saveDraft);
 });
+// tags//
+const tagInput = document.querySelector('.post-tags');
+  const tagContainer = document.querySelector('.tag-container');
+  let tags = [];
+
+  tagInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && tagInput.value.trim() !== '') {
+      e.preventDefault();
+      if (tags.length < 4) {
+        addTag(tagInput.value.trim());
+        tagInput.value = '';
+      } else {
+        alert("Puedes agregar hasta 4 etiquetas.");
+      }
+    }
+  });
+
+  function addTag(tag) {
+    if (!tags.includes(tag)) {
+      tags.push(tag);
+      const tagElement = document.createElement('span');
+      tagElement.classList.add('tag');
+      tagElement.textContent = tag;
+
+      const removeButton = document.createElement('button');
+      removeButton.textContent = 'x';
+      removeButton.addEventListener('click', function () {
+        removeTag(tag);
+      });
+
+      tagElement.appendChild(removeButton);
+      tagContainer.insertBefore(tagElement, tagInput);
+    }
+  }
+
+  function removeTag(tag) {
+    tags = tags.filter(t => t !== tag);
+    updateTagElements();
+  }
+
+  function updateTagElements() {
+    tagContainer.querySelectorAll('.tag').forEach(tagElement => tagElement.remove());
+    tags.forEach(tag => addTag(tag));
+  }
+;
 
 // Función para publicar una nueva publicación
 function publishPost() {
@@ -29,11 +74,10 @@ function publishPost() {
   const tags = document.querySelector('.post-tags').value;
   const content = document.querySelector('.post-content').value;
   const date = document.querySelector('.post-date').value;  // Obtener la fecha de creación
-  const name = document.querySelector('.post-name').value;
   const picture = document.querySelector('.post-picture').value;
 
   // Validar entradas
-  if (!title || !tags || !content || !date ||  !name || !picture) {  // Validar también los campos adicionales
+  if (!title || !tags || !content || !date ||    !picture) {  // Validar también los campos adicionales
     alert("Por favor, completa todos los campos.");
     return;
   }
@@ -42,10 +86,10 @@ function publishPost() {
   const newPostKey = database.ref().child('posts').push().key;
   const postData = {
     title: title,
-    tags: tags,
+    tags: tagInput,
     content: content,
     createdAt: date,  // Guardar la fecha de creación
-    name: name,
+    name: content,
     picture: picture,
     reacciones: 0
   };
@@ -58,7 +102,7 @@ function publishPost() {
       console.log("Publicación creada exitosamente!");
       alert("Publicación creada exitosamente!");
       // Redirigir a la página principal después de publicar
-      window.location.href = "/index.html"; // Reemplaza con la ruta correcta de tu página principal
+      window.location.href = "/loged.html"; // Reemplaza con la ruta correcta de tu página principal
     })
     .catch((error) => {
       console.error("Error al crear la publicación: ", error);
