@@ -1,14 +1,7 @@
 // Obtener datos de Firebase
 
-const BASE_URL = "https://proyectokode-default-rtdb.firebaseio.com/posts";
-
-const getAllPosts = async () => {
-  let response = await fetch(`${BASE_URL}/.json`);
-  let data = await response.json();
-  let dataKeys = Object.keys(data);
-  let postsArray = dataKeys.map((key) => ({ ...data[key], key }));
-  return postsArray;
-};
+import { getAllPosts } from "./module.js";
+getAllPosts();
 
 // Mostrar datos
 
@@ -61,11 +54,6 @@ const renderPosts = (postsByHashtag) => {
     li.appendChild(a);
     li.appendChild(p);
     ccsList.appendChild(li);
-
-    // Agregar evento de clic para redirigir al post completo
-    li.addEventListener("click", () => {
-      window.location.href = a.href;
-    });
   });
 
   // Renderizar posts de #javascript
@@ -81,11 +69,6 @@ const renderPosts = (postsByHashtag) => {
     li.appendChild(a);
     li.appendChild(p);
     javascriptList.appendChild(li);
-
-    // Agregar evento de clic para redirigir al post completo
-    li.addEventListener("click", () => {
-      window.location.href = a.href;
-    });
   });
 
   // Renderizar posts de #react
@@ -101,10 +84,6 @@ const renderPosts = (postsByHashtag) => {
     li.appendChild(a);
     li.appendChild(p);
     reactList.appendChild(li);
-  });
-  // Agregar evento de clic para redirigir al post completo
-  li.addEventListener("click", () => {
-    window.location.href = a.href;
   });
 };
 

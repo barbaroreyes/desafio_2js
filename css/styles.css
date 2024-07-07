@@ -66,6 +66,11 @@ body {
   border-style: none;
 }
 
+.bi {
+  margin-left: 10px;
+  background-color: transparent;
+}
+
 .hashtagList {
   margin-bottom: 1rem;
 }
