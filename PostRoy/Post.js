@@ -66,7 +66,7 @@ const tagInput = document.querySelector('.post-tags');
     tagContainer.querySelectorAll('.tag').forEach(tagElement => tagElement.remove());
     tags.forEach(tag => addTag(tag));
   }
-;
+
 
 // Función para publicar una nueva publicación
 function publishPost() {
@@ -86,7 +86,7 @@ function publishPost() {
   const newPostKey = database.ref().child('posts').push().key;
   const postData = {
     title: title,
-    tags: tagInput,
+    tags:tags,
     content: content,
     createdAt: date,  // Guardar la fecha de creación
     name: content,
